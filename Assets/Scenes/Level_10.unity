@@ -3233,7 +3233,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Swipe down to start
+  m_text: Swipe to start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5665,8 +5665,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 94858556}
   - {fileID: 1667426228}
+  - {fileID: 94858556}
   - {fileID: 835692546}
   - {fileID: 1965906026}
   - {fileID: 1043009798}
@@ -8595,12 +8595,12 @@ Transform:
   m_Children:
   - {fileID: 1050784730}
   - {fileID: 1710116770}
-  - {fileID: 602663093}
   - {fileID: 1059185859}
+  - {fileID: 602663093}
   - {fileID: 1890126106}
   - {fileID: 1380958392}
-  - {fileID: 219306279}
   - {fileID: 1710437617}
+  - {fileID: 219306279}
   m_Father: {fileID: 916443582}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

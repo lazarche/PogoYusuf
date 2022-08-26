@@ -19,12 +19,23 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] AudioClip[] stone;
     [SerializeField] AudioClip[] dirt;
+
+    [SerializeField] AudioClip[] swipe;
     void Start()
     {
         aso = GetComponent<AudioSource>();
         ani = GetComponentInChildren<Animator>();
         target = transform.position;
         rig = GetComponent<Rigidbody2D>();
+    }
+
+    void Update() {
+        if(Input.GetKeyDown(KeyCode.A))
+            MovePlayer(-1);
+            else if(Input.GetKeyDown(KeyCode.D))
+            MovePlayer(1);
+            else if(Input.GetKeyDown(KeyCode.S))
+            MovePlayer(0);
     }
 
     public void MovePlayer(float pom) {
@@ -40,12 +51,15 @@ public class PlayerMovement : MonoBehaviour
         if(!GameManager.instance.isStarted())
             return;
 
-        if(pom > 0 && target.x < limit_max) 
+        if(pom > 0 && target.x < limit_max)
             target = target + new Vector2(1,0);
             else if( pom < 0 && target.x > limit_min)
             target = target + new Vector2(-1,0);
             else 
                 rig.velocity += new Vector2(0,-20);
+
+        aso.clip = swipe[Random.Range(0,swipe.Length)];
+        aso.Play();
     }
 
     void FixedUpdate() {

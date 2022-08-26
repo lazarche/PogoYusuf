@@ -26,7 +26,7 @@ public class CameraMovement : MonoBehaviour
         }
             
         if(follow) {
-            transform.position = Vector3.Lerp(transform.position, new Vector3(0, target.position.y-1.5f, -10), 7 * Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, new Vector3(0, target.position.y-1.5f, -9), 7 * Time.deltaTime);
             if( transform.position.y < targetPos.y)
                 follow = false;
         } else {
