@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
         return started;
     }
     public void StartLevel() {
+        TinySauce.OnGameStarted();
         started = true;
         UiManager.instance.StartLevel();
     }
@@ -40,10 +41,12 @@ public class GameManager : MonoBehaviour
     }
 
     public void NextLevel() {
+        TinySauce.OnGameFinished(UiManager.instance.getMoney());
         LevelManager.GoToNextLevel();
     }
 
     public void RestartLevel() {
+        TinySauce.OnGameFinished(-1);
         LevelManager.RestartLevel();
     }
 

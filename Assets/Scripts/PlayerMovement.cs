@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         if(dead || GameManager.instance.isWin())
             return;
 
-        if(!GameManager.instance.isStarted() && Mathf.Approximately(pom, 0)) {
+        if(!GameManager.instance.isStarted()) {
             GameManager.instance.StartLevel();
             rig.velocity += new Vector2(0,-20);
             return;
@@ -60,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
 
         aso.clip = swipe[Random.Range(0,swipe.Length)];
         aso.Play();
+        ScreenCapture.CaptureScreenshot("TestImage.png");
     }
 
     void FixedUpdate() {

@@ -15,7 +15,7 @@ public class InputManager : MonoBehaviour
     private void Start()
     {
         pm = GetComponent<PlayerMovement>();
-        dragDistance = Screen.width * 25 / 100; //dragDistance is 15% height of the screen
+        dragDistance = Screen.width * 15 / 100; //dragDistance is 15% height of the screen
     }
     private void Update()
     {
